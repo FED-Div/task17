@@ -13,6 +13,21 @@
         justify-content: center;
         align-items: flex-end;
     }
+    .data-rect span{
+      position: relative;
+      top: -5em;
+      display: inline-block;
+      width: 120px;
+      left: -50%;
+      text-align: center;
+      border: 2px #eee solid;
+      background-color: rgba(122,122,122,.6);
+      border-radius: 10px;
+      -webkit-transition: opacity ease-out .2s;
+      -o-transition: opacity ease-out .2s;
+      transition: opacity ease-out .2s;
+      opacity: 0;
+    }
     .data-day {
         width: 15px;
     }
@@ -29,7 +44,10 @@
     
     .data-rect {
         display: inline-block;
-        height: 45px;
+        height: 0px;
+        -webkit-transition: height ease-out 0.3s;
+        -o-transition: height ease-out 0.3s;
+        transition: height ease-out 0.3s;
     }
     
     .data-rect:nth-of-type(4n+0) {

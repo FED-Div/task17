@@ -58,7 +58,7 @@ function renderChart() {
   var html = '';
   for (data in chartData) {
     if (chartData.hasOwnProperty(data)) {
-      html += '<div class="data-rect data-'+ pageState.nowGraTime +'" title=' + chartData[data] + ' style="height:'+ chartData[data] +'px"></div>';
+      html += '<div class="data-rect data-'+ pageState.nowGraTime +'" title=' + chartData[data] + ' style="height:'+ chartData[data] +'px"><span>time: ' + data +' <br/> data:' + chartData[data] + ' </span></div>';
     }
   }
   var chart = document.getElementsByClassName('aqi-chart-wrap')[0];
@@ -71,8 +71,11 @@ function renderChart() {
 function renderRect() {
   var rect = document.getElementsByClassName('data-rect');
   for (var i = 0; i < rect.length; i++) {
-    reac[i].addEventListener('mouseover', function () {
-      var html = '<span>time: xxx <br/> data: xxx </span>'
+    rect[i].addEventListener('mouseover', function () {
+      this.getElementsByTagName('span')[0].style.opacity = 1;
+    });
+    rect[i].addEventListener('mouseout', function () {
+      this.getElementsByTagName('span')[0].style.opacity = 0;
     })
   }
 }
