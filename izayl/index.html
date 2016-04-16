@@ -1,0 +1,83 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+    <style>
+    .aqi-chart-wrap {
+        border: 1px solid black;
+        padding: 20px;
+        min-height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .data-day {
+        width: 15px;
+    }
+    
+    .data-week {
+        width: 30px;
+        margin: 0 10px;
+    }
+    
+    .data-month {
+        width: 60px;
+        margin: 0 20px;
+    }
+    
+    .data-rect {
+        display: inline-block;
+        height: 45px;
+    }
+    
+    .data-rect:nth-of-type(4n+0) {
+        background-color: #e2bcff;
+    }
+    
+    .data-rect:nth-of-type(4n+1) {
+        background-color: #ffbcd9;
+    }
+    
+    .data-rect:nth-of-type(4n+2) {
+        background-color: #d9ffbc;
+    }
+    
+    .data-rect:nth-of-type(4n+3) {
+        background-color: #bcffe2;
+    }
+    </style>
+    <script src="task.js"></script>
+</head>
+
+<body>
+    <fieldset id="form-gra-time">
+        <legend>请选择日期粒度：</legend>
+        <label>日
+            <input name="gra-time" value="day" type="radio" checked="checked">
+        </label>
+        <label>周
+            <input name="gra-time" value="week" type="radio">
+        </label>
+        <label>月
+            <input name="gra-time" value="month" type="radio">
+        </label>
+    </fieldset>
+    <fieldset>
+        <legend>请选择查看的城市：</legend>
+        <select id="city-select">
+            <option>北京</option>
+        </select>
+    </fieldset>
+    <div class="aqi-chart-wrap">
+        <!--     <div class="data-rect data-day" style="height: 55px"></div>
+    <div class="data-rect data-day" style="height: 78px"></div>
+    <div class="data-rect data-day" style="height: 99px"></div>
+    <div class="data-rect data-day" style="height: 120px"></div>
+    <div class="data-rect data-day" style="height: 399px"></div>
+ -->
+    </div>
+</body>
+
+</html>
